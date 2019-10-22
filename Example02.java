@@ -1,15 +1,20 @@
-class Father{
-	private String name="zhangjun";
-	class Child{
-		void introFather() {
-			System.out.println("My Father is "+name);
+package xian;
+
+public class Example05 {
+
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		MyTHread myThread=new MyTHread();
+		myThread.start();
+		while(true) {
+			System.out.println("Main方法在执行");
 		}
 	}
-	
 }
-class Example02{
-	public static void main(String[] args) {
-		Father.Child ch=new Father().new Child();
-		ch.introFather();
+class MyTHread extends Thread{
+	public void run() {
+		while(true) {
+			System.out.println("Run方法在执行");
+		}
 	}
 }
