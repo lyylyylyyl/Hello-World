@@ -42,7 +42,13 @@ public class Bank {
 		}
 	}
 	public void login() {
-		DBUtils dbutil=DBUtils.getInstance();
+		DBUtils dbutil=null;
+		try {
+			dbutil = DBUtils.getInstance();
+		} catch (Exception e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
 		System.out.println("欢迎进入网上银行系统！");
 		while(true) {
 			Scanner sc=new Scanner(System.in);
